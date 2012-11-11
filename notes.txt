@@ -1,0 +1,26 @@
+Typographic parts of a glyph:
+1. x-height
+2. ascender line
+3. apex
+4. baseline
+5. ascender
+6. crossbar
+7. stem
+8. serif
+9. leg
+10. bowl
+11. counter
+12. collar
+13. loop
+14. ear
+15. tie
+16. horizontal bar
+17. arm
+18. vertical bar
+19. cap height
+20. descender line.
+
+By assuming consistent whitespace between lines of a document,
+we can easily break up pages into horizontal lines that are
+only one character tall. Since spaces are usually consistent as
+well, we can search for similarly sized gaps between words.

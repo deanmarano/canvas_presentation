@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Quite the Character</h1>
+					<h3>Character Segmentation in the Brower</h3>
+					<p>
+						<small>by Dean Marano</small>
+					</p>
+				</section>
+
+				<section>
+          <section>
+            <h2>Typography</h2>
+            <p>
+              Why is OCR so hard?
+            </p>
+            <img style="background: white;" src="images/typographia.svg" alt="Elements of Type">
+          </section>
+
+          <section>
+            <h2>Fonts</h2>
+            <img src="images/fonts.jpeg" alt="Elements of Type">
+          </section>
+				</section>
+
+				<section>
+          <section>
+					<h2>Common Approaches</h2>
+          <ul>
+            <li>Character Level Properties (Classical)</li>
+            <li>Character Level Recognition</li>
+            <li>Word Level Recognition</li>
+          </ul>
+          </section>
+          <section>
+            <h2>Post Processing</h2>
+            <ul>
+              <li>Spell Checking</li>
+              <li>Grammar Checking</li>
+            </ul>
+          </section>
+				</section>
+
+				<section>
+					<h2>HTML5 Canvas</h2>
+          <p>
+          Advances in HTML now allow pixel level access to images,
+          allowing image processing to be done in the browser. 
+          </p>
+          <h3>Why use the browser?</h3>
+          <p>
+          The browser allows for a standard, license free environment
+          that anyone can use an access on a variety of devices.
+          </p>
+          <a href="http://spielzeugz.de/html5/liquid-particles.html">HTML5 Demo</a>
+				</section>
+
+				<section>
+					<h2>Segmentation By Whitespace</h2>
+          <div>
+          <img width="30%" src="images/clean_text.png" alt="Clean Text">
+          <img width="30%" src="images/segmented_text.png" alt="Segmented Text">
+          </div>
+          <a href="http://atom.deanoftech.com/images/">Demo</a>
+				</section>
+
+				<section>
+					<h2>Finding Characters in Words</h2>
+          <p>Question: Can we use whitespace segmentation again?</p>
+          <img style="background: white;" width="30%" src="images/kerning.svg" alt="Kerning">
+          <p>Answer: Sometimes...</p>
+				</section>
+
+
+				<section>
+					<h2>Pretty Code</h2>
+					<pre><code contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) ) {
+        node.className += ' roll';
+      }
+    };
+  }
+}
+					</code></pre>
+					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section>
+
+				<section>
+					<h1>THE END</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
