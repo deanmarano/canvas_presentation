@@ -1,3 +1,7 @@
+Why is OCR important?
+* significant amounts of text non-digital
+* handwritten forms
+
 Typographic parts of a glyph:
 1. x-height
 2. ascender line

@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Quite the Character - Adventures in OCR</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -91,7 +91,7 @@
 				</section>
 
 				<section>
-					<h2>Segmentation By Whitespace</h2>
+					<h2>My Strategy - Segmentation By Whitespace</h2>
           <div>
           <img width="30%" src="images/clean_text.png" alt="Clean Text">
           <img width="30%" src="images/segmented_text.png" alt="Segmented Text">
@@ -106,27 +106,46 @@
           <p>Answer: Sometimes...</p>
 				</section>
 
+				<section>
+					<h2>Creating a Baseline</h2>
+          <p>
+          For each character we wish to identify, we draw it to the screen
+          and create two histograms. We use the same segmentation to narrow
+          the whitespace around the character as much as possible before
+          taking the histogram.
+          </p>
+          <img src="images/waveforms.png" alt="Waveforms">
+				</section>
 
 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) ) {
-        node.className += ' roll';
-      }
-    };
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+					<h2>Future Work</h2>
+          <ul>
+            <li>Comparing Waveforms</li>
+            <li>Skewing</li>
+          </ul>
 				</section>
+
+
+				<!--<section>-->
+					<!--<h2>Pretty Code</h2>-->
+					<!--<pre><code contenteditable>-->
+<!--function linkify( selector ) {-->
+  <!--if( supports3DTransforms ) {-->
+
+    <!--var nodes = document.querySelectorAll( selector );-->
+
+    <!--for( var i = 0, len = nodes.length; i &lt; len; i++ ) {-->
+      <!--var node = nodes[i];-->
+
+      <!--if( !node.className ) ) {-->
+        <!--node.className += ' roll';-->
+      <!--}-->
+    <!--};-->
+  <!--}-->
+<!--}-->
+					<!--</code></pre>-->
+					<!--<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>-->
+				<!--</section>-->
 
 				<section>
 					<h1>THE END</h1>
